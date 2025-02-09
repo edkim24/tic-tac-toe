@@ -1,2 +1,5 @@
-# tic-tac-toe
-simple tic tac toe game in JS
+# Rock-paper-scissors game
+
+simple rock paper scissors game in JS
+
+- edit to add more functions
