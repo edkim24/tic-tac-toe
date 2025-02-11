@@ -50,9 +50,21 @@ const playRound = function (humanChoice, computerChoice) {
 	}
 };
 
-for (let i = 0; i < 5; i++) {
-	playRound(getHumanChoice(), getComputerChoice());
-	console.log(humanScore, computerScore);
-}
+const playButtonsParent = document.querySelector('.play-buttons');
+
+playButtonsParent.addEventListener('click', e => {
+	e.preventDefault();
+	const humanEve = e.target.innerHTML.toLowerCase();
+	const compChoice = getComputerChoice();
+
+	playRound(humanEve, compChoice);
+	const results = document.querySelector('.results');
+	results.textContent = `Your current Score ${humanScore} || Computer Score ${computerScore}`;
+});
+
+// for (let i = 0; i < 5; i++) {
+// 	playRound(getHumanChoice(), getComputerChoice());
+// 	console.log(humanScore, computerScore);
+// }
 
 // getComputerChoice();
